@@ -1,5 +1,20 @@
 import marked from 'marked';
 
+const renderer = new marked.Renderer();
+
+renderer.image = (src, title, alt) => {
+    // To ensure that images stay in their containers
+    return `
+        <figure style="max-width: 100%;">
+            <img 
+                src="${ src }"
+                alt="${ alt }"
+                style="width: 100%; heigh: auto;"
+            />
+        </figure>
+    `;
+}
+
 export default function MarkdownManager() {
     this.parseMarkdown = function parseMarkdown(markdown) {
         const match = /---\n([\s\S]+?)\n---/.exec(markdown);
@@ -19,6 +34,6 @@ export default function MarkdownManager() {
     }
 
     this.render = function render(markdown) {
-        return marked(markdown);
+        return marked(markdown, { renderer: renderer });
     }
 }
