@@ -31,6 +31,7 @@
 
     .nav-list__item {
         border-bottom: 1px solid var(--color-primary);
+        text-align: center;
     }
 
     .nav-link,
@@ -76,11 +77,12 @@
         .detail { grid-area: detail; }
 
         .side-nav {
-            /* 1. 250px at 16px font */
-            width: 15.625em; /* 1. */
-            max-width: 15.625em; /* 1. */
+            /* 1. 200px at 16px font */
+            width: 12.5em; /* 1. */
             border-right: 1px solid var(--color-primary);
         }
+
+        .nav-list__item { text-align: left; }
     }
 </style>
 
