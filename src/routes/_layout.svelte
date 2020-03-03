@@ -9,6 +9,9 @@
 
 <style>
 	:global(#app-root) {
+		/* 1. 1200px at 16px font size */
+		max-width: 87.5em; /* 1. */
+		margin: auto;
 		display: flex;
   		min-height: 100vh;
   		flex-direction: column;
