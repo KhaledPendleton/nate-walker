@@ -13,8 +13,38 @@
 
 <style>
     .master-detail {
-        /* 1. Parent is a 6-column grid */
-        grid-column: 1 / 7; /* 1. */
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0; left: 0;
+    }
+
+    .master-list {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+
+    ul a { text-decoration: none; }
+
+    .master-list__item {
+        border-bottom: 1px solid var(--color-primary);
+        background-color: var(--color-white);
+        color: var(--color-primary);
+        padding: 0.5em;
+    }
+
+    .master-list__item:hover,
+    .master-list__item.active {
+        color: var(--color-white);
+        background-color: var(--color-primary);
+    }
+
+    .ghost {
+        /* 1. Needs to be the same height as line height in order to look like text */
+        background-color: var(--color-primary);
+        height: 1.2em; /* 1. */
+        margin: 0;
     }
 
     .wrapper {
@@ -23,96 +53,56 @@
         padding-left: 1rem;
     }
 
-    .nav-list {
-        margin: 0;
-        padding-left: 0;
-        list-style-type: none;
-    }
-
-    .nav-list__item {
-        border-bottom: 1px solid var(--color-primary);
-        text-align: center;
-    }
-
-    .nav-link,
-    .nav-link--loading {
-        /* 1. Necessary for text overflow */
-        /* 2. 1.3 by default */
-        width: 100%;
-        height: 100%;
-        padding: 0.5rem;
-        display: inline-block;
-        text-transform: capitalize;
-        text-overflow: ellipsis;
-        text-decoration: none;
-        font-family: 'Roboto';
-        font-size: 1.5rem;
-        color: inherit;
-        overflow: hidden; /* 1. */
-        white-space: nowrap; /* 1. */
-        line-height: 1; /* 2. */
-    }
-
-    .active,
-    .nav-list__item:hover {
-        background-color: var(--color-primary);
-        color: var(--color-white);
-    }
-
     .large-screen { display: none; }
 
     /* 600px at 16px font */
     @media screen and (min-width: 37.5rem) {
-        .large-screen {
-            display: initial;
-        }
+        .large-screen { display: initial; }
 
         .master-detail {
             display: grid;
-            grid-template-columns: auto 1fr;
+            grid-template-columns: calc(100vw / 6) 1fr;
             grid-template-areas: "master detail";
         }
 
-        .master { grid-area: master; }
-        .detail { grid-area: detail; }
-
-        .side-nav {
-            /* 1. 200px at 16px font */
-            width: 12.5em; /* 1. */
+        .master {
+            grid-area: master;
             border-right: 1px solid var(--color-primary);
+            overflow-y: scroll;
         }
 
-        .nav-list__item { text-align: left; }
+        .detail { 
+            grid-area: detail; 
+            overflow-y: scroll;
+        }
     }
 </style>
 
-<div class="master-detail">
-    <!--
-        If there is a project selected AND the screen is small only show detail.
-        If there is a project selected AND the screen is large show both master and detail
-    -->
-    <nav class="master side-nav" class:large-screen={ segment ? true : false }>
-        <ul class="nav-list">
+<!--
+    If there is a project selected AND the screen is small only show detail.
+    If there is no project selected AND the screen is small only show master.
+    If the screen is large show both master and detail
+-->
+
+<section class="master-detail">
+    <div class="master" class:large-screen={ segment ? true : false }>
+        <ul class="master-list">
             {#if projects}
                 {#each projects as project}
-                    <li class="nav-list__item" class:active={segment === project.slug}>
-                        <a class="nav-link" href={`/portfolio/${project.slug}`}>
+                    <a href={`/portfolio/${project.slug}`}>
+                        <li class="master-list__item" class:active={segment === project.slug}>
                             {project.metadata.title}
-                        </a>
-                    </li>
+                        </li>
+                    </a>
                 {/each}
             {:else}
-                <li><span class="nav-link--loading">Loading...</span></li>
+                <li class="master-list__item">
+                    <p class="ghost"></p>
+                </li>
             {/if}
         </ul>
-    </nav>
-    <!--
-        If there is no project selected AND the screen is small only show master.
-        If there is no project selected AND the screen is large show both master and detail
-    -->
-    <section class="detail"  class:large-screen={ segment ? false : true }>
-        <div class="wrapper">
-            <slot></slot>
-        </div>
-    </section>
-</div>
+    </div>
+    <div class="detail" class:large-screen={ segment ? false : true }>
+        <slot></slot>
+    </div>
+</section>

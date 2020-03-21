@@ -16,7 +16,11 @@
 </script>
 
 <style>
-    :global(.project) { font-size: 1.2rem; }
+    :global(.project) { 
+        width: 90%;
+        margin: auto;
+        font-size: 1.2rem; 
+    }
 
     :global(.project h1),
     :global(.project h2),

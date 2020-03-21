@@ -11,18 +11,16 @@
 	:global(#app-root) {
 		/* 1. 1200px at 16px font size */
 		max-width: 87.5em; /* 1. */
+		min-height: 100vh;
 		margin: auto;
 		display: flex;
-  		min-height: 100vh;
   		flex-direction: column;
 	}
 
 	main {
 		/* 1. Forces main to fill remaining space */
 		flex: 1; /* 1. */
-		display: grid;
-        column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
+		position: relative;
 	}
 </style>
 
