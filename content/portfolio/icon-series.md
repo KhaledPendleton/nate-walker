@@ -8,6 +8,5 @@ The intent of this project was to create icons for web. This meant creating icon
 ![Cactus](images/portfolio/icon-series/Cactus.jpg)
 ![Flower](images/portfolio/icon-series/Flower.jpg)
 ![Hanging](images/portfolio/icon-series/Hanging.jpg)
-![Icon 32px](images/portfolio/icon-series/Icon32px.png)
 ![Leafy](images/portfolio/icon-series/Leafy.jpg)
 ![Leafy Plant Animation](images/portfolio/icon-series/leafyplantanimation.gif)
