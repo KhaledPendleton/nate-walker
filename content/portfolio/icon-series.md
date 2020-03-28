@@ -9,4 +9,4 @@ The intent of this project was to create icons for web. This meant creating icon
 ![Flower](images/portfolio/icon-series/Flower.jpg)
 ![Hanging](images/portfolio/icon-series/Hanging.jpg)
 ![Leafy](images/portfolio/icon-series/Leafy.jpg)
-![Leafy Plant Animation](images/portfolio/icon-series/leafyplantanimation.gif)
+![Leafy Plant Animation](images/portfolio/icon-series/Leaf-Icon.gif)
