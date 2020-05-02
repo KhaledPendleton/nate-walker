@@ -41,7 +41,7 @@
 
     .nav-link {
         padding: 0.25em 0.5em;
-        display: inline-block;
+        display: block;
         text-transform: uppercase;
         text-decoration: none;
         font-weight: 700;
