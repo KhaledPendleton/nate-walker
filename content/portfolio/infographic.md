@@ -1,6 +1,7 @@
 ---
 title: Infographic
 publishedOn: 2020-03-21
+position: 1
 ---
 
 <video controls>

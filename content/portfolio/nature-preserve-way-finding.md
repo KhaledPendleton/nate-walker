@@ -1,6 +1,7 @@
 ---
 title: Nature Preserve Way Finding
 publishedOn: 2020-03-21
+position: 1
 ---
 
 The purpose of this project was to upgrade the Binghamton University Nature Preserve’s trail signage and maps. In doing so, additional trail signage was created to better communicate trail rules and policies to promote the best experience for guests while maintaining the natural landscape of the preservation. The philosophy behind this project is that man-made structures introduced to the preservation should not only aid visitors, but the wildlife that it is home to. For that reason, signage was created which doubled as birdhouses for the enjoyment of both humans and wild creatures alike!

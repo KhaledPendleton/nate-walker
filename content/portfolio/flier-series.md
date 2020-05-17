@@ -1,6 +1,7 @@
 ---
 title: Flier Series
 publishedOn: 2020-03-21
+position: 1
 ---
 
 This project is a poster series created for National Drug Facts Week. The philosophy behind this poster series is to neither condone nor condemn recreational drug use, but to provide a basis of information for students to form around the effects and uses of drugs. Additional information on safe actions to take in order to help minimize the damage of recreational drug use are featured as well. The entire series was created in Adobe InDesign.

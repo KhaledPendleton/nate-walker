@@ -1,6 +1,7 @@
 ---
 title: Baxter the Bearcat
 publishedOn: 2020-03-21
+position: 1
 ---
 
 This campaign was created for Binghamton University Campus Recreation as a reimagining of the university mascot, Baxter the Bearcat. This simplified 2-D rendering of the beloved mascot is utilized for advertisements, informative pieces, and social media. Upon entering the Campus Recreation Center, patrons are greeted at the door with animated television screens of Baxter encouraging them to join in the variety of activities and opportunities that Campus Recreation has to offer. All instances of Baxter have been created in Adobe Illustrator, and animations were done in Adobe After Effects.

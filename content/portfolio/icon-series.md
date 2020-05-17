@@ -1,6 +1,7 @@
 ---
 title: Icon Series
 publishedOn: 2020-03-21
+position: 1
 ---
 
 The intent of this project was to create icons for web. This meant creating icons that were recognizable at a range of sizes, making them legible for all purposes and devices. In doing so, details had to be removed from smaller variations while maintaining visual harmony between all renditions. If you click your browser search bar, you’ll notice one of the icons in action!
